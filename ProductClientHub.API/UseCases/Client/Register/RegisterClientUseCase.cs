@@ -13,7 +13,7 @@ namespace ProductClientHub.API.UseCases.Client.Register
 {
     public class RegisterClientUseCase
     {
-        public ResponseClientJson Execute(RequestClientJson request)
+        public ResponseShortClientJson Execute(RequestClientJson request)
         {
             Validate(request);
 
@@ -29,7 +29,7 @@ namespace ProductClientHub.API.UseCases.Client.Register
 
             dbContext.SaveChanges();
 
-            return new ResponseClientJson
+            return new ResponseShortClientJson
             {
                 Id = entity.Id,
                 Name = entity.Name,
