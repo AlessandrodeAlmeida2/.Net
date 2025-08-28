@@ -1,6 +1,7 @@
 ﻿using Org.BouncyCastle.Asn1.Ocsp;
 using ProductClientHub.API.Entities;
 using ProductClientHub.API.Infrastructure;
+using ProductClientHub.API.UseCases.Client.SharedValidator;
 using ProductClientHub.Communication.Requests;
 using ProductClientHub.Communication.Responses;
 // Adicione o 'using' para a sua nova exceção
@@ -38,7 +39,7 @@ namespace ProductClientHub.API.UseCases.Client.Register
 
         private void Validate(RequestClientJson request)
         {
-            var validator = new RegisterClientValidator();
+            var validator = new RequestClientValidator();
 
             var result = validator.Validate(request);
 
