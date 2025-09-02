@@ -2,6 +2,7 @@
 using ProductClientHub.API.UseCases.Client.GetAll;
 using ProductClientHub.API.UseCases.Client.Register;
 using ProductClientHub.API.UseCases.Client.Update;
+using ProductClientHub.API.UseCases.Product.Delete;
 using ProductClientHub.Communication.Requests;
 using ProductClientHub.Communication.Responses;
 using ProductClientHub.Exceptions.ExeptionBase;
@@ -63,9 +64,16 @@ namespace ProductClientHub.API.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete()
+        [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseShortProductJson), StatusCodes.Status400BadRequest)]
+        public IActionResult Delete([FromRoute] Guid id)
         {
-            return Ok();
+            var useCase = new DeleteClientUseCase();
+
+            useCase.Execute(id);
+
+            return NoContent();
         }
     }
 }
