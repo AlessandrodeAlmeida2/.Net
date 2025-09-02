@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProductClientHub.Communication.Responses
 {
-    public class ResponseAllProductsJson
+    public class ResponseAllClientsJson
     {
-        public List<ResponseShortProductJson> Products { get; set; } = [];
+        public List<ResponseShortClientJson> Clients { get; set; } = [];
     }
 }
