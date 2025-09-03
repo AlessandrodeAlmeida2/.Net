@@ -8,14 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="UseCases\Client\NovaPasta1\**" />
+    <Compile Remove="UseCases\Client\NovaPasta2\**" />
     <Compile Remove="UseCases\Client\NovaPasta3\**" />
-    <Content Remove="UseCases\Client\NovaPasta1\**" />
+    <Compile Remove="UseCases\Client\NovaPasta\**" />
+    <Content Remove="UseCases\Client\NovaPasta2\**" />
     <Content Remove="UseCases\Client\NovaPasta3\**" />
-    <EmbeddedResource Remove="UseCases\Client\NovaPasta1\**" />
+    <Content Remove="UseCases\Client\NovaPasta\**" />
+    <EmbeddedResource Remove="UseCases\Client\NovaPasta2\**" />
     <EmbeddedResource Remove="UseCases\Client\NovaPasta3\**" />
-    <None Remove="UseCases\Client\NovaPasta1\**" />
+    <EmbeddedResource Remove="UseCases\Client\NovaPasta\**" />
+    <None Remove="UseCases\Client\NovaPasta2\**" />
     <None Remove="UseCases\Client\NovaPasta3\**" />
+    <None Remove="UseCases\Client\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,11 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ProductClientHub.Communication\ProductClientHub.Communication.csproj" />
     <ProjectReference Include="..\ProductClientHub.Exceptions\ProductClientHub.Exceptions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UseCases\Client\NovaPasta2\" />
-    <Folder Include="UseCases\Client\NovaPasta\" />
   </ItemGroup>
 
 </Project>
